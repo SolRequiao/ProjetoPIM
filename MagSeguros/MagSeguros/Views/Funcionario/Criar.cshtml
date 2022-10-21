@@ -13,12 +13,12 @@
 <form asp-controller="Funcionario" asp-action="Criar" method="post">
     <div class="mb-3">
         <label for="nome" class="form-label">Nome</label>
-        <input type="text" asp-for="Nome" class="form-control">
+        <input type="text" asp-for="Nome" class="form-control" minlenght="3">
         @Html.ValidationMessageFor(nome => nome.Nome)
     </div>
     <div class="mb-3">
         <label for="nome" class="form-label">E-mail</label>
-        <input type="text" asp-for="Email" class="form-control">
+        <input type="email" asp-for="Email" class="form-control">
         @Html.ValidationMessageFor(email => email.Email)
     </div>
     <div class="mb-3">
@@ -37,7 +37,7 @@
     </div>
     <div class="mb-3">
         <label for="nome" class="form-label">Senha</label>
-        <input type="password" asp-for="Senha" class="form-control">
+        <input type="password" asp-for="Senha" class="form-control" minlenght="6">
         @Html.ValidationMessageFor(senha => senha.Senha)
     </div>
 

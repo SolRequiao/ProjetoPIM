@@ -50,7 +50,7 @@ namespace MagSeguros.Controllers
                         Nome = funcionarioSemSenha.Nome,
                         Login = funcionarioSemSenha.Login,
                         Email = funcionarioSemSenha.Email,
-                        Perfil = funcionarioSemSenha.Perfil
+                        Perfil = funcionarioSemSenha.Perfil,
                     };
 
                     funcionario = _funcionarioRepositorio.Atualizar(funcionario);
