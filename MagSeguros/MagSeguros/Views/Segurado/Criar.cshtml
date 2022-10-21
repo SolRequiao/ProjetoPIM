@@ -1,0 +1,170 @@
+﻿@model SeguradoModel
+@{
+    ViewData["Title"] = "Cadastrar Segurado";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Cadastrar Segurado</h1>
+
+</div>
+
+<form asp-controller="Segurado" asp-action="Criar" method="post">
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control">
+        @Html.ValidationMessageFor(nome => nome.Nome)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">CPF</label>
+        <input type="text" asp-for="Cpf" class="form-control">
+        @Html.ValidationMessageFor(cpf => cpf.Cpf)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Data de nascimento</label>
+        <input type="date" asp-for="Nascimento" class="form-control">
+        @Html.ValidationMessageFor(nascimento => nascimento.Nascimento)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Genero</label>
+        <select asp-for="Genero" class="form-control">
+            <option value="0">Selecionar</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Estado Civil</label>
+        <select asp-for="EstadoCivil" class="form-control">
+            <option value="0">Selecionar</option>
+            <option value="Solteiro(a)">Solteiro(a)</option>
+            <option value="Casado(a)">Casado(a)</option>
+            <option value="Separado(a)">Separado(a)</option>
+            <option value="Divorciado(a)">Divorciado(a)</option>
+            <option value="Viuvo(a)">Viúvo(a)</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Telefone ou Celular</label>
+        <input type="text" asp-for="Cel" class="form-control">
+        @Html.ValidationMessageFor(cel => cel.Cel)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Email</label>
+        <input type="email" asp-for="Email" class="form-control">
+        @Html.ValidationMessageFor(email => email.Email)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Renda</label>
+        <input type="text" asp-for="Renda" class="form-control">
+        @Html.ValidationMessageFor(renda => renda.Renda)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">CEP</label>
+        <input type="text" asp-for="Cep" class="form-control">
+        @Html.ValidationMessageFor(cep => cep.Cep)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Cidade</label>
+        <input type="text" asp-for="Cidade" class="form-control">
+        @Html.ValidationMessageFor(cidade => cidade.Cidade)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Estado</label>
+        <select class="form-control" asp-for="Uf">
+            <option value="">UF</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AM">AM</option>
+            <option value="AP">AP</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </select>
+        @Html.ValidationMessageFor(uf => uf.Uf)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Endereço</label>
+        <input type="text" class="form-control" asp-for="Endereco">
+        @Html.ValidationMessageFor(endereco => endereco.Endereco)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Complemento</label>
+        <input type="text" class="form-control" asp-for="ComplementoEnd">
+        @Html.ValidationMessageFor(complementoEnd => complementoEnd.ComplementoEnd)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Possui algum tipo de doença grave</label>
+        <select class="form-control" asp-for="DoencaGrave">
+            <option value="Não">Não</option>
+            <option value="Sim">Sim</option>
+        </select>
+        @Html.ValidationMessageFor(doencaGrave => doencaGrave.DoencaGrave)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Prêmio</label>
+        <input type="text" class="form-control" asp-for="Premio">
+        @Html.ValidationMessageFor(premio => premio.Premio)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Parcela</label>
+        <input type="text" class="form-control" asp-for="Parcela">
+        @Html.ValidationMessageFor(parcela => parcela.Parcela)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome do(a) beneficiário(a)</label>
+        <input type="text" class="form-control" asp-for="NomeBeneficiario">
+        @Html.ValidationMessageFor(nomeBeneficiario => nomeBeneficiario.NomeBeneficiario)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">CPF do(a) beneficiário(a)</label>
+        <input type="text" class="form-control" asp-for="CpfBeneficiario">
+        @Html.ValidationMessageFor(cpfBeneficiario => cpfBeneficiario.CpfBeneficiario)
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">E-mail do(a) beneficiário(a)</label>
+        <input type="text" class="form-control" asp-for="EmaiBeneficiario">
+        @Html.ValidationMessageFor(emaiBeneficiario => emaiBeneficiario.EmaiBeneficiario)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+    <a class="btn btn-secondary" asp-controller="Segurado" asp-action="Index" role="button">Voltar</a>
+</form>
