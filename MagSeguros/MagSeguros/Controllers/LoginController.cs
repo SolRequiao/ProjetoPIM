@@ -14,19 +14,29 @@ namespace MagSeguros.Controllers
             _funcionarioRepositorio = funcionarioRepositorio;
             _sessao = sessao;
         }
+
         public IActionResult Index()
         {
-
             if (_sessao.BuscarSessaoFuncinario() != null) return RedirectToAction("Index", "Home");
 
             return View();
+        }
+
+        public IActionResult Home()
+        {
+            return View("Home");
+        }
+
+        public IActionResult QuemSomos()
+        {
+            return View("QuemSomos");
         }
 
         public IActionResult Sair()
         {
             _sessao.RemoverSessaoFuncionario();
 
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("Home");
         }
 
         [HttpPost]
@@ -50,13 +60,13 @@ namespace MagSeguros.Controllers
 
                     TempData["MenssagemErro"] = "Login e/ou senha incorreto(s)";
                 }
-                return View("Index");
+                return View("Home");
             }
             catch (System.Exception erro)
             {
 
                 TempData["MenssagemErro"] = $"Houve um erro ao tentar fazer o login, tente novamente mais tarde. Detalhe do erro: {erro.Message}";
-                return RedirectToAction("Index");
+                return RedirectToAction("Home");
             }
         }
     }

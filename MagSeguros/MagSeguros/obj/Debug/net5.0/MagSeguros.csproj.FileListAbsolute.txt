@@ -748,3 +748,5 @@ C:\Users\solre\OneDrive\Documentos\MagSeguros\MagSeguros\MagSeguros\obj\Debug\ne
 C:\Users\solre\OneDrive\Documentos\MagSeguros\MagSeguros\MagSeguros\obj\Debug\net5.0\MagSeguros.pdb
 C:\Users\solre\OneDrive\Documentos\MagSeguros\MagSeguros\MagSeguros\obj\Debug\net5.0\MagSeguros.genruntimeconfig.cache
 C:\Users\solre\OneDrive\Documentos\MagSeguros\MagSeguros\MagSeguros\obj\Debug\net5.0\ref\MagSeguros.dll
+C:\Users\solre\OneDrive\Documentos\MagSeguros\MagSeguros\MagSeguros\obj\Debug\net5.0\Razor\Views\Login\Home.cshtml.g.cs
+C:\Users\solre\OneDrive\Documentos\MagSeguros\MagSeguros\MagSeguros\obj\Debug\net5.0\Razor\Views\Login\QuemSomos.cshtml.g.cs
