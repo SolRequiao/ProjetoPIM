@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net6.0": {
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -4206,7 +4206,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    "net6.0": [
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 5.0.17",
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
@@ -4223,11 +4223,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
+      "projectUniqueName": "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
       "projectName": "MagSeguros",
-      "projectPath": "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
+      "projectPath": "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
       "packagesPath": "C:\\Users\\solre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\obj\\",
+      "outputPath": "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4238,7 +4238,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -4246,8 +4246,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -4258,8 +4258,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",

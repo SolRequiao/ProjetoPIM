@@ -1,7 +1,61 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Tela princial do funcinario</h1>
+<style>
+    #main {
+        background-color: #202024;
+        padding-top: -3rem;
+    }
+
+    .optionEmployee {
+        transition: all 0.3s;
+    }
+
+    .optionEmployee:hover {
+        filter: saturate(1.6);
+        transform: scale(1.08);
+    }
+</style>
+
+<div id="main" class="w-100 h-100 d-flex align-items-baseline pb-3 shadow-lg rounded-sm">
+    <div class="w-50 d-flex flex-column align-items-baseline">
+        <h2 class="w-75 ml-4 text-white">Seja bem vindo ao seu ambiente de trabalho</h2>
+        <img width="400" src="~/assets/discussion-animate.svg" />
+    </div>
+
+    <div class="w-50 ">
+
+        <div class="mt-5 mr-3 py-3 px-2">
+            <h3 class="mb-4 text-white">Para onde deseja ir no momento?</h3>
+
+            <nav class="d-flex align-items-center justify-content-around">
+                <a class="btn btn-info px-4 py-3 rounded shadow text-white text-decoration-none" asp-controller="Funcionario" asp-action="Index">Ir para funcionários</a>
+                <a class="btn btn-info px-4 py-3 rounded shadow text-white text-decoration-none" asp-controller="Segurado" asp-action="Index">Ir para segurados</a>
+                <a class="btn btn-danger px-4 py-3 rounded shadow text-white text-decoration-none" asp-controller="Login" asp-action="Sair">Sair da conta</a>
+            </nav>
+        </div>
+
+        <h3 class="mt-5 text-white">O que deseja realizar?</h3>
+
+
+        <div class="mt-4 mr-3 py-2">
+            <nav class="d-flex align-items-center justify-content-around font-weight-bold">
+                <div class="bg-light py-3 px-3 rounded">
+                    <a class="optionEmployee d-flex flex-column align-items-center text-decoration-none text-info" asp-controller="Funcionario" asp-action="Criar">
+                        <img height="150" src="~/assets/employee-icon.png" />
+                        <span class="text-decoration-none text-info mt-2">Cadastrar novo funcionário</span>
+                    </a>
+                </div>
+
+                <div class="bg-light py-3 px-3 rounded">
+                    <a class="optionEmployee d-flex flex-column align-items-center text-decoration-none text-info" asp-controller="Segurado" asp-action="Criar">
+                        <img height="150" src="~/assets/client-ico.png" />
+                        <span class="text-decoration-none text-info mt-2">Cadastrar novo segurado</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
 </div>

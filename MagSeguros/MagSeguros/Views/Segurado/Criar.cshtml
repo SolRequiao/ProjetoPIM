@@ -3,29 +3,34 @@
     ViewData["Title"] = "Cadastrar Segurado";
 }
 
-<div class="text-center">
+<style>
 
-    <h1 class="display-4">Cadastrar Segurado</h1>
+</style>
+
+<div class="text-justify">
+
+    <h2 class="text-secondary border-bottom border-secondary pb-3">Cadastro de <span class="text-primary">Segurado</span> </h2>
 
 </div>
 
-<form asp-controller="Segurado" asp-action="Criar" method="post">
-
+<form class="mt-4 w-100 container " asp-controller="Segurado" asp-action="Criar" method="post">
+    <div class="row">
+    <div class="col mr-4">
     <div class="mb-3">
         <label for="nome" class="form-label">Nome</label>
-        <input type="text" asp-for="Nome" class="form-control" minlength="3">
+        <input type="text" asp-for="Nome" class="form-control" minlength="3" placeholder="Heloisa Maria Ferreira">
         @Html.ValidationMessageFor(nome => nome.Nome)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">CPF</label>
-        <input type="text" asp-for="Cpf" class="form-control" maxlength="11" minlength="11" oninput="mascara(this)">
+        <input type="text" asp-for="Cpf" class="form-control" maxlength="11" minlength="11" oninput="mascara(this)" placeholder="xxx.xxx.xxx-xx">
         @Html.ValidationMessageFor(cpf => cpf.Cpf)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">Data de nascimento</label>
-        <input type="date" asp-for="Nascimento" class="form-control">
+        <input id="birthday" type="date" asp-for="Nascimento" class="form-control" placeholder="dd/mm/aaaa">
         @Html.ValidationMessageFor(nascimento => nascimento.Nascimento)
     </div>
 
@@ -52,34 +57,36 @@
 
     <div class="mb-3">
         <label for="nome" class="form-label">Telefone ou Celular</label>
-        <input type="tel" asp-for="Cel" class="form-control" maxlength="11" minlength="10">
+        <input type="tel" asp-for="Cel" class="form-control" maxlength="15" minlength="10" placeholder="(dd) 99999-9999">
         @Html.ValidationMessageFor(cel => cel.Cel)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">Email</label>
-        <input type="email" asp-for="Email" class="form-control" minlength="5">
+        <input type="email" asp-for="Email" class="form-control" minlength="5" placeholder="segurado@email.com">
         @Html.ValidationMessageFor(email => email.Email)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">Renda</label>
-        <input type="number" asp-for="Renda" class="form-control">
+        <input type="number" asp-for="Renda" class="form-control" placeholder="R$ 3000,00">
         @Html.ValidationMessageFor(renda => renda.Renda)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">CEP</label>
-        <input type="text" asp-for="Cep" class="form-control">
+        <input type="text" asp-for="Cep" class="form-control" placeholder="15910-000">
         @Html.ValidationMessageFor(cep => cep.Cep)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">Cidade</label>
-        <input type="text" asp-for="Cidade" class="form-control">
+        <input type="text" asp-for="Cidade" class="form-control" placeholder="São Paulo">
         @Html.ValidationMessageFor(cidade => cidade.Cidade)
     </div>
+    </div>
 
+    <div class="col">
     <div class="mb-3">
         <label for="nome" class="form-label">Estado</label>
         <select class="form-control" asp-for="Uf">
@@ -117,7 +124,7 @@
 
     <div class="mb-3">
         <label for="nome" class="form-label">Endereço</label>
-        <input type="text" class="form-control" asp-for="Endereco">
+        <input type="text" class="form-control" asp-for="Endereco" placeholder="Rua exemplo do segurado, N-99">
         @Html.ValidationMessageFor(endereco => endereco.Endereco)
     </div>
 
@@ -138,36 +145,89 @@
 
     <div class="mb-3">
         <label for="nome" class="form-label">Prêmio</label>
-        <input type="number" class="form-control" asp-for="Premio">
+        <input id="premio" type="number" class="form-control" asp-for="Premio">
         @Html.ValidationMessageFor(premio => premio.Premio)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">Parcela</label>
-        <input type="number" class="form-control" asp-for="Parcela">
+        <input id="parcela" type="text" class="form-control" asp-for="Parcela">
         @Html.ValidationMessageFor(parcela => parcela.Parcela)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">Nome do(a) beneficiário(a)</label>
-        <input type="text" class="form-control" asp-for="NomeBeneficiario" minlenght="3">
+        <input type="text" class="form-control" asp-for="NomeBeneficiario" minlenght="3" placeholder="Morgan Ferreira">
         @Html.ValidationMessageFor(nomeBeneficiario => nomeBeneficiario.NomeBeneficiario)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">CPF do(a) beneficiário(a)</label>
-        <input type="text" class="form-control" asp-for="CpfBeneficiario" maxlength="11" minlength="11" oninput="mascara(this)">
+        <input type="text" class="form-control" asp-for="CpfBeneficiario" maxlength="11" minlength="11" oninput="mascara(this)" placeholder="xxx.xxx.xxx-xx">
         @Html.ValidationMessageFor(cpfBeneficiario => cpfBeneficiario.CpfBeneficiario)
     </div>
 
     <div class="mb-3">
         <label for="nome" class="form-label">E-mail do(a) beneficiário(a)</label>
-        <input type="email" class="form-control" asp-for="EmaiBeneficiario" minlength="5">
+        <input type="email" class="form-control" asp-for="EmaiBeneficiario" minlength="5" placeholder="beneficiario@email.com">
         @Html.ValidationMessageFor(emaiBeneficiario => emaiBeneficiario.EmaiBeneficiario)
     </div>
 
-    <button type="submit" class="btn btn-primary">Adicionar</button>
-    <a class="btn btn-secondary" asp-controller="Segurado" asp-action="Index" role="button">Voltar</a>
+    <div class="d-flex align-items-center">
+      <button type="submit" class="btn btn-primary mr-2">Adicionar</button>
+      <a class="btn btn-secondary" asp-controller="Segurado" asp-action="Index" role="button">Voltar</a>
+    </div>
+
+    </div>
+    </div>
 </form>
 
 <script src="~/js/mascaraCpf.js" asp-append-version="true"></script>
+<script src="~/js/validadorCpf.js" asp-append-version="true"></script>
+<script src="~/js/validadorCpfBeneficiario.js" asp-append-version="true"></script>
+
+<script defer>
+    const inputPremio = document.getElementById('premio')
+    const campoParcela = document.getElementById('parcela')
+    const birthDate = document.getElementById('birthday')
+    let idade
+
+    birthDate.addEventListener('change', () => {
+        let birthDateValue = new Date(birthDate.value)
+        let toDay = new Date()
+
+        calculaIdade(birthDateValue, toDay)
+    })
+
+
+    premio.addEventListener('change', () => {
+      let valorPremio = inputPremio.value
+      calcularParcela(valorPremio)
+    })
+
+    function calculaIdade(nascimento, hoje) {
+        idade = Math.floor(Math.ceil(Math.abs(nascimento.getTime() - hoje.getTime()) / (1000 * 3600 * 24)) / 365.25);
+        return idade
+    }
+
+    function calcularParcela(premio) {
+        var formato = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
+
+        if (idade >= 18 && idade <= 40) {
+            let valorParaPagar = premio / 150
+            campoParcela.value = `${valorParaPagar.toLocaleString('pt-BR', formato)}`
+        }
+
+        if (idade >= 41 && idade <= 60) {
+            let valorParaPagar = premio / 100
+            campoParcela.value = `${valorParaPagar.toLocaleString('pt-BR', formato)}`
+
+        }
+
+        if (idade > 60) {
+            let valorParaPagar = premio / 75
+            campoParcela.value = `${valorParaPagar.toLocaleString('pt-BR', formato)}`
+        }
+    }
+
+</script>
