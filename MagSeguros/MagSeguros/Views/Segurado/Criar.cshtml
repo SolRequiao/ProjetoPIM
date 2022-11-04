@@ -213,21 +213,27 @@
     function calcularParcela(premio) {
         var formato = { minimumFractionDigits: 2, style: 'currency', currency: 'BRL' }
 
+        if (idade < 18 && idade >= 0) {
+            let valorParaPagar = premio / 2000
+            campoParcela.value = `${valorParaPagar.toLocaleString('pt-BR', formato)}`
+        }
+
         if (idade >= 18 && idade <= 40) {
-            let valorParaPagar = premio / 150
+            let valorParaPagar = premio / 1500
             campoParcela.value = `${valorParaPagar.toLocaleString('pt-BR', formato)}`
         }
 
         if (idade >= 41 && idade <= 60) {
-            let valorParaPagar = premio / 100
+            let valorParaPagar = premio / 1000
             campoParcela.value = `${valorParaPagar.toLocaleString('pt-BR', formato)}`
 
         }
 
         if (idade > 60) {
-            let valorParaPagar = premio / 75
+            let valorParaPagar = premio / 750
             campoParcela.value = `${valorParaPagar.toLocaleString('pt-BR', formato)}`
         }
+
     }
 
 </script>

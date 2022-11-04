@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj": {}
+    "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj": {}
   },
   "projects": {
-    "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj": {
+    "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
+        "projectUniqueName": "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
         "projectName": "MagSeguros",
-        "projectPath": "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
+        "projectPath": "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
         "packagesPath": "C:\\Users\\solre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\obj\\",
+        "outputPath": "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

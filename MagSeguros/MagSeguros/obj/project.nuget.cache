@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DBBGezyefHG2zBAXtb4Q6DG7K+MTKBlAbLYUsXk8l0PPRdafYyP/RXtjAEwaf7UQBS/NQ9cpfQiwaIg6sv2PfA==",
+  "dgSpecHash": "A6HlPvSml7c/FJkayFG7faXjUE0AWjRkhImgyWUBffn1qRH9REQkw+MsnKdCVG90QvFQQNoJ4ssE9ovOwlKJaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\solre\\Downloads\\2MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
+  "projectFilePath": "C:\\Users\\solre\\OneDrive\\Documentos\\MagSeguros\\MagSeguros\\MagSeguros\\MagSeguros.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\solre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\solre\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",
