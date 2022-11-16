@@ -3,6 +3,12 @@
     ViewData["Title"] = "Listagem de Segurado";
 }
 
+<style>
+    table thead th, table tbody td, table tbody th {
+        text-align: center !important;
+    }
+</style>
+
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -15,7 +21,6 @@
     {
         <div class="alert alert-success" role="alert">
             @TempData["MenssagemSucesso"]
-            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
         </div>
     }
 
@@ -23,7 +28,6 @@
     {
         <div class="alert alert-danger" role="alert">
             @TempData["MenssagemErro"]
-            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
         </div>
     }
 
@@ -32,16 +36,14 @@
     <table class="table" id="tb-segurados">
         <thead>
             <tr>
-                <th scope="col">Id</th>
                 <th scope="col">Nome</th>
                 <th scope="col">CPF</th>
-                <th scope="col">Nascimento</th>
-                <th scope="col">Genero</th>
-                <th scope="col">Estado Civil</th>
-                <th scope="col">Telefone ou<br />Celular</th>
+                <th scope="col">Premio</th>
+                <th scope="col">Parcela</th>
                 <th scope="col">Email</th>
-                <th scope="col">Renda</th>
-                <th scope="col"></th>
+                <th scope="col">Beneficiário</th>
+                <th scope="col">CPF<br />Beneficiário</th>
+                <th scope="col">Editar/Apagar</th>
             </tr>
         </thead>
         <tbody>
@@ -50,15 +52,13 @@
                 foreach(SeguradoModel segurado in Model)
                 {
                     <tr>
-                        <th scope="row">@segurado.Id</th>
                         <td>@segurado.Nome</td>
                         <td>@segurado.Cpf</td>
-                        <td>@segurado.Nascimento</td>
-                        <td>@segurado.Genero</td>
-                        <td>@segurado.EstadoCivil</td>
-                        <td>@segurado.Cel</td>
+                        <td>@segurado.Premio</td>
+                        <td>@segurado.Parcela</td>
                         <td>@segurado.Email</td>
-                        <td>@segurado.Renda</td>
+                        <td>@segurado.NomeBeneficiario</td>
+                        <td>@segurado.CpfBeneficiario</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" class="btn btn-primary" asp-route-id="@segurado.Id" asp-controller="Segurado" asp-action="Editar">Editar</a>

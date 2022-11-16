@@ -27,10 +27,6 @@ namespace MagSeguros.Controllers
             return View("Home");
         }
 
-        public IActionResult QuemSomos()
-        {
-            return View("QuemSomos");
-        }
 
         public IActionResult Sair()
         {

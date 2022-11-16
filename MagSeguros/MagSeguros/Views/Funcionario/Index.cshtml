@@ -3,6 +3,12 @@
     ViewData["Title"] = "Listagem de Funcionarios";
 }
 
+<style>
+    table thead th, table tbody td, table tbody th{
+        text-align: center !important;
+    }
+</style>
+
 <div class="text-center">
 
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -15,7 +21,6 @@
     {
         <div class="alert alert-success" role="alert">
             @TempData["MenssagemSucesso"]
-            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
         </div>
     }
 
@@ -23,7 +28,6 @@
     {
         <div class="alert alert-danger" role="alert">
             @TempData["MenssagemErro"]
-            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
         </div>
     }
 
@@ -38,7 +42,8 @@
                 <th scope="col">Email</th>
                 <th scope="col">Perfil</th>
                 <th scope="col">Data de cadastro</th>
-                <th scope="col"></th>
+                <th scope="col">Data de cadastro</th>
+                <th scope="col">Editar/Apagar</th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +58,7 @@
                         <td>@funcionario.Email</td>
                         <td>@(funcionario.Perfil == MagSeguros.Enums.PerfilEnum.Admin ? "Administrador" : "Padrão")</td>
                         <td>@funcionario.DataCadastro</td>
+                        <td>@funcionario.DataAtualizacao</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a role="button" class="btn btn-primary" asp-route-id="@funcionario.Id" asp-controller="Funcionario" asp-action="Editar">Editar</a>

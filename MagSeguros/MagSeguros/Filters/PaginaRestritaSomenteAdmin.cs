@@ -29,7 +29,7 @@ namespace MagSeguros.Filters
 
                 if (funcionario.Perfil != Enums.PerfilEnum.Admin)
                 {
-                    context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controller", "Home" }, { "action", "Index" } });
+                    context.Result = new RedirectToRouteResult(new RouteValueDictionary { { "controller", "Home" }, { "action", "SemPermissao" } });
                 }
             }
 
